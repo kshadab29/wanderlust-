@@ -1,0 +1,26 @@
+
+<body>
+    <h3>Create New Listing Here</h3>
+    <form method="post" action="/listings" novalidate class="needs-validation">
+    
+        <input type="text" name="listing[title]" placeholder="Enter title" class="form-control" required>
+    
+    
+        <textarea name="listing[description]" id="" cols="30" rows="10"  class="form-control" required></textarea>
+    
+       
+        <input type="text" name="listing[image]" class="form-control">
+    
+       
+        <input type="number" name="listing[price]" placeholder="Enter price" class="form-control" required>
+    
+        
+        <input type="text" name="listing[location]" placeholder="Enter location" class="form-control" required>
+    
+       
+        <input type="text" name="listing[country]" placeholder="Enter country" class="form-control" required>
+ 
+        <button class="btn btn-dark">Add</button>
+    </form>
+</body>
+

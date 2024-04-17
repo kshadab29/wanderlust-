@@ -1,0 +1,36 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <div class="col-8 offset-2">
+    <h3>Edit This Listing</h3>
+    <form method="post" action="/listings/<%= listing._id%>?_method=put" novalidate class="needs-validation">
+        <div>
+            <label for="title">title</label>
+        <input type="text" name="listing[title]" class="form-control" value="<%= listing.title %>" required><br>
+       </div>
+       <div >
+        <label for="description">description</label>
+        <textarea name="listing[description]" id="" cols="30" rows="10" class="form-control"required><%= listing.description %></textarea><br>
+       </div>
+       <div>
+        <label for="image">image-link</label>
+        <input type="text" name="listing[image]" class="form-control" value="<%= listing.image %>" required><br>
+       </div>
+
+       <div>
+        <label for="price">price</label>
+        <input type="number" name="listing[price]" class="form-control" value="<%= listing.price %>"required ><br>
+       </div>
+
+        <div>
+        <label for="location">location</label>
+        <input type="text" name="listing[location]" class="form-control" value="<%= listing.location %>"required ><br>
+        </div>
+
+        <div>
+        <label for="country">country</label>
+        <input type="text" name="listing[country]" class="form-control" value="<%= listing.country %>"required ><br>
+        </div>
+        <button class="btn btn-danger">Update</button>
+    </form>
+</div>
+</body>
